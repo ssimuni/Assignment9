@@ -5,12 +5,42 @@ import { AuthContext } from '../providers/AuthProvider'
 const Navbar = () => {
 
     const { user, logOut } = useContext(AuthContext);
+
     const handleLogOut = () => {
         logOut()
             .then()
             .catch()
     }
 
+    const renderLoggedInNavbar = () => {
+        return (
+            <div className="flex items-center space-x-4">
+                <div className="relative">
+                    <div className="group cursor-pointer">
+                        <div className="w-10 h-10 rounded-full overflow-hidden bg-gray-300">
+                            <img
+                                src={user.photoURL || 'https://via.placeholder.com/150'}
+                                alt="User Avatar"
+                                className="w-full h-full object-cover"
+                            />
+                        </div>
+                        <span className="absolute -bottom-20 right-0 bg-white border-2 shadow-lg rounded-lg text-black px-1 py-0.5 opacity-0 group-hover:opacity-100 transition-opacity">
+                            {user.displayName}
+                        </span>
+                    </div>
+                </div>
+                <button className="btn" onClick={handleLogOut}>Log Out</button>
+            </div>
+        );
+    };
+
+    const renderLoggedOutNavbar = () => {
+        return (
+            <Link to="/login">
+                <button className="btn">Log In</button>
+            </Link>
+        );
+    };
     const navlinks = <>
         <li><NavLink to="/">Home</NavLink></li>
         <li><NavLink to="/login">Login</NavLink></li>
@@ -37,18 +67,7 @@ const Navbar = () => {
             </div>
 
             <div className="navbar-end">
-                {
-                    user ? (<>
-                        <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
-                            <div className="w-10 rounded-full">
-                                <img alt="Tailwind CSS Navbar component" src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
-                            </div>
-                        </div>
-                        <a className="btn" onClick={handleLogOut}>Log Out</a>
-                    </>) : <Link to="/login">
-                        <a className="btn">Log In</a>
-                    </Link>
-                }
+                {user ? renderLoggedInNavbar() : renderLoggedOutNavbar()}
             </div>
         </div >
     )

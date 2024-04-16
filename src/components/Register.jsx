@@ -6,12 +6,16 @@ import { useContext, useState } from "react";
 import Swal from 'sweetalert2';
 import { AuthContext } from "../providers/AuthProvider";
 import 'animate.css';
+import { useNavigate } from 'react-router-dom';
+
+
 
 const Register = () => {
-    const {createUser} = useContext(AuthContext);
-
+    const { createUser, logOut } = useContext(AuthContext);
+    const navigate = useNavigate();
     const [registerError, setRegisterError] = useState('');
     const [showPassword, setShowPassword] = useState(false);
+    const [photo, setPhoto] = useState(null);
 
     const handleRegister = async (e) => {
         e.preventDefault();
@@ -19,6 +23,7 @@ const Register = () => {
         const name = e.target.name.value;
         const email = e.target.email.value;
         const password = e.target.password.value;
+        const photo = e.target.photo.value;
         console.log(email, password, name)
 
         setRegisterError('');
@@ -39,7 +44,7 @@ const Register = () => {
         }
 
         if (password)
-            createUser(email, password)
+            await createUser(email, password, name, photo)
                 .then(result => {
                     console.log(result.user);
                     Swal.fire({
@@ -47,6 +52,8 @@ const Register = () => {
                         title: 'Success',
                         text: 'Registration Successful!',
                     });
+                    logOut();
+                    navigate('/login');
                 })
                 .catch(error => {
                     console.error(error);
@@ -57,6 +64,13 @@ const Register = () => {
                     });
                 })
     }
+
+
+    const handlePhotoChange = (e) => {
+        const file = e.target.files[0];
+        setPhoto(file);
+    }
+
     return (
         <section className="h-screen flex flex-col md:flex-row justify-center space-y-10 md:space-y-0 md:space-x-16 items-center my-2 mx-5 md:mx-0 md:my-0">
             <div className="md:w-1/3 max-w-sm">
@@ -76,10 +90,12 @@ const Register = () => {
                     required
                     placeholder="Name"
                 />
-                 <input
+                <input
                     className="text-sm w-full px-4 py-2 border border-solid border-gray-300 rounded mt-4"
-                    type="text"
+                    type="file"
                     name='photo'
+                    accept="image/*"
+                    onChange={handlePhotoChange}
                     required
                     placeholder="Select Profile Picture"
                 />
