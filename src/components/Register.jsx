@@ -2,13 +2,15 @@ import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import { IoEyeSharp } from "react-icons/io5";
 import { IoEyeOffSharp } from "react-icons/io5";
 import auth from "../firebase/firebase.config";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import Swal from 'sweetalert2';
+import { AuthContext } from "../providers/AuthProvider";
+import 'animate.css';
 
 const Register = () => {
+    const {createUser} = useContext(AuthContext);
 
     const [registerError, setRegisterError] = useState('');
-    const [success, setSuccess] = useState('');
     const [showPassword, setShowPassword] = useState(false);
 
     const handleRegister = async (e) => {
@@ -20,7 +22,6 @@ const Register = () => {
         console.log(email, password, name)
 
         setRegisterError('');
-        setSuccess('');
 
         if (password.length < 6) {
             setRegisterError('Password must be at least 6 character long.');
@@ -38,10 +39,9 @@ const Register = () => {
         }
 
         if (password)
-            createUserWithEmailAndPassword(auth, email, password)
+            createUser(email, password)
                 .then(result => {
                     console.log(result.user);
-                    setSuccess('Registration Successfull.');
                     Swal.fire({
                         icon: 'success',
                         title: 'Success',
@@ -67,7 +67,7 @@ const Register = () => {
             </div>
             <form className="md:w-1/3 max-w-sm" onSubmit={handleRegister}>
                 <div className="text-center md:text-left">
-                    <h1 className="text-blue-800 font-bold text-center text-5xl mb-5">Register Here!</h1>
+                    <h1 className="text-blue-800 font-bold text-center text-4xl mb-5 animate__animated animate__repeat-2 animate__heartBeat">Register Here!</h1>
                 </div>
                 <input
                     className="text-sm w-full px-4 py-2 border border-solid border-gray-300 rounded"
@@ -75,6 +75,13 @@ const Register = () => {
                     name='name'
                     required
                     placeholder="Name"
+                />
+                 <input
+                    className="text-sm w-full px-4 py-2 border border-solid border-gray-300 rounded mt-4"
+                    type="text"
+                    name='photo'
+                    required
+                    placeholder="Select Profile Picture"
                 />
                 <input
                     className="text-sm w-full px-4 py-2 border border-solid border-gray-300 rounded mt-4"
@@ -119,9 +126,6 @@ const Register = () => {
             </form>
             {
                 registerError && <p className="text-red-600">{registerError}</p>
-            }
-            {
-                success && <p className="text-green-700">{success}</p>
             }
         </section>
     );

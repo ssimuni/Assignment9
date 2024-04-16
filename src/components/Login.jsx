@@ -1,14 +1,27 @@
-import { BiLogoFacebook } from "react-icons/bi";
+import { VscGithub } from "react-icons/vsc";
 import { AiOutlineGoogle } from "react-icons/ai";
+import { useContext } from "react";
+import { AuthContext } from "../providers/AuthProvider";
+import 'animate.css';
 
 const Login = () => {
 
+  const { signIn } = useContext(AuthContext);
   const handleLogin = e => {
     e.preventDefault();
     console.log(e.currentTarget);
     const form = new FormData(e.currentTarget);
-    console.log(form.get('email'));
-    console.log(form.get('password'));
+    const email = form.get('email');
+    const password = form.get('password')
+    console.log(email, password)
+
+    signIn(email, password)
+      .then(result => {
+        console.log(result.user)
+      })
+      .catch(error => {
+        console.error(error);
+      })
   }
 
   return (
@@ -21,13 +34,13 @@ const Login = () => {
       </div>
       <form className="md:w-1/3 max-w-sm" onSubmit={handleLogin}>
         <div className="text-center md:text-left">
-          <h1 className="text-blue-800 font-bold text-center text-5xl mb-5">Login Here!</h1>
+          <h1 className="text-blue-800 font-bold text-center text-4xl mb-5 animate__animated animate__heartBeat animate__repeat-2 ">Login Here!</h1>
           <label className="mr-1">Sign in with</label>
           <button
             type="button"
             className="mx-1 h-9 w-9  rounded-full bg-blue-600 hover:bg-blue-700 text-white shadow-[0_4px_9px_-4px_#3b71ca]"
           >
-            <BiLogoFacebook
+            <VscGithub
               size={20}
               className="flex justify-center items-center w-full"
             />

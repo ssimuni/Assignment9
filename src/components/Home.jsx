@@ -1,37 +1,40 @@
 import React from 'react'
+import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
+
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/scrollbar';
 
 const Home = () => {
     return (
-        <div className="carousel w-full">
-            <div id="slide1" className="carousel-item relative w-full">
-                <img src="https://daisyui.com/images/stock/photo-1625726411847-8cbb60cc71e6.jpg" className="w-full" />
-                <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                    <a href="#slide4" className="btn btn-circle">❮</a>
-                    <a href="#slide2" className="btn btn-circle">❯</a>
-                </div>
-            </div>
-            <div id="slide2" className="carousel-item relative w-full">
-                <img src="https://daisyui.com/images/stock/photo-1609621838510-5ad474b7d25d.jpg" className="w-full" />
-                <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                    <a href="#slide1" className="btn btn-circle">❮</a>
-                    <a href="#slide3" className="btn btn-circle">❯</a>
-                </div>
-            </div>
-            <div id="slide3" className="carousel-item relative w-full">
-                <img src="https://daisyui.com/images/stock/photo-1414694762283-acccc27bca85.jpg" className="w-full" />
-                <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                    <a href="#slide2" className="btn btn-circle">❮</a>
-                    <a href="#slide4" className="btn btn-circle">❯</a>
-                </div>
-            </div>
-            <div id="slide4" className="carousel-item relative w-full">
-                <img src="https://daisyui.com/images/stock/photo-1665553365602-b2fb8e5d1707.jpg" className="w-full" />
-                <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                    <a href="#slide3" className="btn btn-circle">❮</a>
-                    <a href="#slide1" className="btn btn-circle">❯</a>
-                </div>
-            </div>
+        <div>
+            <h1 className='text-4xl font-bold text-center my-10 text-blue-700'>See Our Works!</h1>
+            <Swiper
+                // install Swiper modules
+                modules={[Navigation, Pagination, Scrollbar, A11y]}
+                spaceBetween={50}
+                slidesPerView={3}
+                navigation
+                scrollbar={{ draggable: true }}
+                onSwiper={(swiper) => console.log(swiper)}
+                onSlideChange={() => console.log('slide change')}
+            >
+                <SwiperSlide><img src="1.jpg" className='w-full h-[300px]' alt="" /></SwiperSlide>
+                <SwiperSlide><img src="2.jpg" className='w-full h-[300px]' alt="" /></SwiperSlide>
+                <SwiperSlide><img src="3.jpg" className='w-full h-[300px]' alt="" /></SwiperSlide>
+                <SwiperSlide><img src="4.jpg" className='w-full h-[300px]' alt="" /></SwiperSlide>
+                <SwiperSlide><img src="5.jpg" className='w-full h-[300px]' alt="" /></SwiperSlide>
+                <SwiperSlide><img src="6.jpg" className='w-full h-[300px]' alt="" /></SwiperSlide>
+                <SwiperSlide><img src="7.jpg" className='w-full h-[300px]' alt="" /></SwiperSlide>
+                <SwiperSlide><img src="8.jpg" className='w-full h-[300px]' alt="" /></SwiperSlide>
+                <SwiperSlide><img src="9.jpg" className='w-full h-[300px]' alt="" /></SwiperSlide>
+                ...
+            </Swiper>
         </div>
+
     )
 }
 

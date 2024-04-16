@@ -1,0 +1,25 @@
+
+/* Customize Swiper navigation arrows */
+.swiper-button-prev,
+.swiper-button-next {
+  width: 40px; /* Adjust arrow width */
+  height: 40px; /* Adjust arrow height */
+  background-color: #000; /* Arrow background color */
+  color: #fff; /* Arrow icon color */
+  border-radius: 50%; /* Make arrow circular */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease; /* Add transition effect */
+
+  /* Optional: Add hover effect */
+  &:hover {
+    background-color: #333; /* Darken arrow on hover */
+  }
+}
+
+/* Customize Swiper navigation arrow icons (optional) */
+.swiper-button-prev::before,
+.swiper-button-next::before {
+  font-size: 20px; /* Adjust arrow icon size */
+}

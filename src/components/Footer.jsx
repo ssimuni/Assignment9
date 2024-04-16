@@ -3,12 +3,12 @@ import React from 'react'
 const Footer = () => {
     return (
         <div>
-            <footer className="bg-white lg:grid lg:grid-cols-5 border rounded-lg my-5 border-rose-950">
+            <footer className="bg-base-300 lg:grid lg:grid-cols-5 mt-10">
                 <div className="relative block h-32 lg:col-span-2 lg:h-full">
                     <img
                         src="footer.jpg"
                         alt=""
-                        className="absolute inset-0 h-full w-full object-cover rounded-l-lg"
+                        className="absolute inset-0 h-full w-full object-cover"
                     />
                 </div>
 
@@ -171,7 +171,7 @@ const Footer = () => {
                         </div>
                     </div>
 
-                    <div className="mt-12 border-t border-gray-100 pt-12">
+                    <div className="mt-12 border-t border-gray-400 pt-12">
                         <div className="sm:flex sm:items-center sm:justify-between">
                             <ul className="flex flex-wrap gap-4 text-xs">
                                 <li>
