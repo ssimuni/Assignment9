@@ -36,6 +36,7 @@ const Home = () => {
                 <SwiperSlide><img src="9.jpg" className='w-full h-[300px]' alt="" /></SwiperSlide>
                 ...
             </Swiper>
+            <h1 className='text-4xl font-bold text-center my-10 text-blue-700'>See Our Works!</h1>
             <div className='my-10 lg:ml-20 ml-5'>
                 <div className='lg:grid lg:grid-cols-3'>
                     {

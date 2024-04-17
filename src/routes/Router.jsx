@@ -8,6 +8,7 @@ import Error from "../components/Error";
 import Estates from "../components/Estates";
 import PrivateRoute from "./PrivateRoute";
 import Profile from "../components/Profile";
+import FeedbackForm from "../components/FeedbackForm";
 
 const router = createBrowserRouter([
   {
@@ -36,6 +37,10 @@ const router = createBrowserRouter([
       {
         path: '/profile',
         element: <PrivateRoute><Profile></Profile></PrivateRoute>
+      },
+      {
+        path: '/feedbackform',
+        element: <PrivateRoute><FeedbackForm></FeedbackForm></PrivateRoute>
       }
     ]
   },
