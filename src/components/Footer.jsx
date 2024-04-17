@@ -6,7 +6,7 @@ const Footer = () => {
             <footer className="bg-base-300 lg:grid lg:grid-cols-5 mt-10">
                 <div className="relative block h-32 lg:col-span-2 lg:h-full">
                     <img
-                        src="footer.jpg"
+                        src="/footer.jpg"
                         alt=""
                         className="absolute inset-0 h-full w-full object-cover"
                     />
