@@ -3,7 +3,7 @@ import React from 'react'
 const Footer = () => {
     return (
         <div>
-            <footer className="bg-base-300 lg:grid lg:grid-cols-5 mt-10">
+            <footer className="bg-base-200 lg:grid lg:grid-cols-5 mt-10">
                 <div className="relative block h-32 lg:col-span-2 lg:h-full">
                     <img
                         src="/footer.jpg"

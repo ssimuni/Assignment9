@@ -67,76 +67,79 @@ const Register = () => {
     }
 
     return (
-        <section className="h-screen flex flex-col md:flex-row justify-center space-y-10 md:space-y-0 md:space-x-16 items-center my-2 mx-5 md:mx-0 md:my-0">
-            <div className="md:w-1/3 max-w-sm">
-                <img
-                    src="https://tecdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp"
-                    alt="Sample image"
-                />
-            </div>
-            <form className="md:w-1/3 max-w-sm" onSubmit={handleRegister}>
-                <div className="text-center md:text-left">
-                    <h1 className="text-blue-800 font-bold text-center text-4xl mb-5 animate__animated animate__repeat-2 animate__heartBeat">Register Here!</h1>
+        <div className="bg-white place-content-center justify-center flex mb-10">
+            <section className="w-[800px] h-[500px] flex flex-col md:flex-row justify-center space-y-10 md:space-y-0 md:space-x-16 items-center my-2 md:mx-0 md:my-0 bg-white border-black border rounded-lg shadow-lg">
+                <div className="md:w-1/3 max-w-sm">
+                    <img
+                    className="rounded-lg"
+                        src="lr.jpg"
+                        alt="Sample image"
+                    />
                 </div>
-                <input
-                    className="text-sm w-full px-4 py-2 border border-solid border-gray-300 rounded"
-                    type="text"
-                    name='name'
-                    required
-                    placeholder="Name"
-                />
-                <input
-                    className="text-sm w-full px-4 py-2 border border-solid border-gray-300 rounded mt-4"
-                    type="text"
-                    name='photo'
-                    required
-                    placeholder="Select Profile Picture"
-                />
-                <input
-                    className="text-sm w-full px-4 py-2 border border-solid border-gray-300 rounded mt-4"
-                    type="email"
-                    name='email'
-                    required
-                    placeholder="Email Address"
-                />
-                <div className="flex">
+                <form className="md:w-1/3 max-w-sm" onSubmit={handleRegister}>
+                    <div className="text-center md:text-left">
+                        <h1 className="text-black font-bold text-center text-4xl mb-5 animate__animated animate__repeat-2 animate__heartBeat">Register Here!</h1>
+                    </div>
+                    <input
+                        className="text-sm w-full px-4 py-2 border border-solid border-gray-300 rounded"
+                        type="text"
+                        name='name'
+                        required
+                        placeholder="Name"
+                    />
                     <input
                         className="text-sm w-full px-4 py-2 border border-solid border-gray-300 rounded mt-4"
-                        type={showPassword ? "text" : "password"}
-                        name='password'
+                        type="text"
+                        name='photo'
                         required
-                        placeholder="Password"
+                        placeholder="Select Profile Picture"
                     />
-                    <span className="-ml-6 pt-6" onClick={() => setShowPassword(!showPassword)}>
-                        {
-                            showPassword ? <IoEyeOffSharp /> : <IoEyeSharp />
-                        }
-                    </span>
-                </div>
+                    <input
+                        className="text-sm w-full px-4 py-2 border border-solid border-gray-300 rounded mt-4"
+                        type="email"
+                        name='email'
+                        required
+                        placeholder="Email Address"
+                    />
+                    <div className="flex">
+                        <input
+                            className="text-sm w-full px-4 py-2 border border-solid border-gray-300 rounded mt-4"
+                            type={showPassword ? "text" : "password"}
+                            name='password'
+                            required
+                            placeholder="Password"
+                        />
+                        <span className="-ml-6 pt-6" onClick={() => setShowPassword(!showPassword)}>
+                            {
+                                showPassword ? <IoEyeOffSharp /> : <IoEyeSharp />
+                            }
+                        </span>
+                    </div>
 
 
-                <div className="text-center md:text-left">
-                    <button
-                        className="mt-4 bg-blue-600 hover:bg-blue-700 px-4 py-2 text-white uppercase rounded text-xs tracking-wider"
-                        type="submit"
-                    >
-                        Register
-                    </button>
-                </div>
-                <div className="mt-4 font-semibold text-sm text-slate-500 text-center md:text-left">
-                    Already have an account?{" "}
-                    <a
-                        className="text-blue-600 hover:underline hover:underline-offset-4"
-                        href="/login"
-                    >
-                        Login
-                    </a>
-                </div>
-            </form>
-            {
-                registerError && <p className="text-red-600">{registerError}</p>
-            }
-        </section>
+                    <div className="text-center md:text-left">
+                        <button
+                            className="mt-4 bg-black px-4 py-2 text-white uppercase rounded text-xs tracking-wider"
+                            type="submit"
+                        >
+                            Register
+                        </button>
+                    </div>
+                    <div className="mt-4 font-semibold text-sm text-slate-500 text-center md:text-left">
+                        Already have an account?{" "}
+                        <a
+                            className="text-black hover:underline hover:underline-offset-4"
+                            href="/login"
+                        >
+                            Login
+                        </a>
+                    </div>
+                </form>
+                {
+                    registerError && <p className="text-red-600">{registerError}</p>
+                }
+            </section>
+        </div>
     );
 };
 

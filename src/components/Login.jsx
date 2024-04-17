@@ -94,7 +94,8 @@ const Login = () => {
       <section className="w-[800px] h-[500px] flex flex-col md:flex-row justify-center space-y-10 md:space-y-0 md:space-x-16 items-center my-2 md:mx-0 md:my-0 bg-white border-black border rounded-lg shadow-lg">
         <div className="md:w-1/3 max-w-sm">
           <img
-            src="1.jpg"
+           className="rounded-lg"
+            src="lr.jpg"
             alt="Sample image"
           />
         </div>
