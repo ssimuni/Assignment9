@@ -5,12 +5,14 @@ import { useContext } from "react";
 import { AuthContext } from "../providers/AuthProvider";
 import 'animate.css';
 import Swal from 'sweetalert2';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 const Login = () => {
 
   const { signIn, signInWithGoogle, signInWithGithub } = useContext(AuthContext);
   const navigate = useNavigate();
+  const location = useLocation();
+  console.log(location);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
@@ -53,7 +55,7 @@ const Login = () => {
       });
       setEmail('');
       setPassword('');
-      navigate('/');
+      navigate(location?.state ? location.state : '/');
     } catch (error) {
       console.error(error);
       Swal.fire({

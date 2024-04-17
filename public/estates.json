@@ -1,0 +1,130 @@
+[
+    {
+        "id": 1,
+        "estate_title": "Spacious Single-Family Home",
+        "segment_name": "Single-family home",
+        "image": "https://i.ibb.co/LgsGryv/1.jpg",
+        "description": "This spacious single-family home features 4 bedrooms, 3 bathrooms, a large backyard, and modern amenities. Ideal for families looking for a comfortable living space. The interior layout includes a welcoming living room, a modern kitchen with updated appliances, and spacious bedrooms. The backyard is perfect for outdoor gatherings and relaxation, providing ample space for children and pets to play. Located in a peaceful suburbia, this home offers privacy and convenience.",
+        "price": "$500,000",
+        "status": "Sale",
+        "area": "2,500 sq ft",
+        "location": "Suburbia, USA",
+        "facilities": [
+            "Living room",
+            "Backyard",
+            "Garage"
+        ]
+    },
+    {
+        "id": 2,
+        "estate_title": "Luxury Townhouse",
+        "segment_name": "Townhouse",
+        "image": "https://i.ibb.co/3v1yDgB/2.jpg",
+        "description": "Experience luxury living in this beautifully designed townhouse with 3 bedrooms, rooftop terrace, and contemporary finishes. This townhouse features high ceilings, elegant flooring, and large windows that offer plenty of natural light. The modern kitchen is equipped with top-of-the-line appliances, and the rooftop terrace provides stunning views of the city skyline. Enjoy the convenience of a fitness center within the complex, making it easy to maintain an active lifestyle.",
+        "price": "$700,000",
+        "status": "Sale",
+        "area": "2,000 sq ft",
+        "location": "Savar, City",
+        "facilities": [
+            "Rooftop terrace",
+            "Modern kitchen",
+            "Fitness center"
+        ]
+    },
+    {
+        "id": 3,
+        "estate_title": "City Apartment with Stunning Views",
+        "segment_name": "Apartment",
+        "image": "https://i.ibb.co/WB3LBCN/3.jpg",
+        "description": "Enjoy city living in this stylish apartment featuring 2 bedrooms, open-concept living space, and breathtaking city views. The apartment boasts modern design elements and premium amenities, including a fully equipped gym and concierge service. The open-concept layout provides flexibility in decorating and organizing the living space. Wake up to panoramic city views and take advantage of nearby entertainment venues, restaurants, and cultural attractions.",
+        "price": "$2,500/month",
+        "status": "Rent",
+        "area": "1,200 sq ft",
+        "location": "Downtown, City",
+        "facilities": [
+            "City views",
+            "Gym",
+            "Concierge service"
+        ]
+    },
+    {
+        "id": 4,
+        "estate_title": "Student Housing Near Campus",
+        "segment_name": "Student housing",
+        "image": "https://i.ibb.co/6F92hPM/4.jpg",
+        "description": "Convenient student housing located steps away from the university campus. Fully furnished with amenities catered to student life. This student housing unit offers a comfortable environment for studying and relaxing. Features include a designated study area, laundry facilities, and secure bike storage. Enjoy the convenience of living close to campus and academic resources.",
+        "price": "$1,000/month",
+        "status": "Rent",
+        "area": "800 sq ft",
+        "location": "College Town, USA",
+        "facilities": [
+            "Study area",
+            "Laundry facilities",
+            "Bike storage"
+        ]
+    },
+    {
+        "id": 5,
+        "estate_title": "Senior Living Community",
+        "segment_name": "Senior living community",
+        "image": "https://i.ibb.co/sP1qp8W/5.jpg",
+        "description": "Experience a vibrant community for seniors with comfortable apartments, wellness programs, and social activities. This senior living community offers spacious apartments designed for convenience and accessibility. Residents can participate in wellness programs and social activities, fostering a sense of community and engagement. Enjoy the beautiful gardens and outdoor spaces that provide a peaceful retreat.",
+        "price": "$3,000/month",
+        "status": "Rent",
+        "area": "1,500 sq ft",
+        "location": "Retirement City, USA",
+        "facilities": [
+            "Wellness center",
+            "Social activities",
+            "Gardens"
+        ]
+    },
+    {
+        "id": 6,
+        "estate_title": "Beachfront Vacation Rental",
+        "segment_name": "Vacation Rental",
+        "image": "https://i.ibb.co/0VgRryS/6.jpg",
+        "description": "Escape to a beachfront paradise with this vacation Rental offering ocean views, multiple bedrooms, and outdoor entertainment areas. This vacation rental is an ideal retreat for families and groups seeking relaxation and adventure. Wake up to stunning ocean views, enjoy outdoor dining on the patio, and explore nearby attractions and water activities. This property provides all the comforts of home in a breathtaking beachfront setting.",
+        "price": "$300/night",
+        "status": "Rent",
+        "area": "1,800 sq ft",
+        "location": "Beachfront, Paradise Island",
+        "facilities": [
+            "Ocean views",
+            "Outdoor patio",
+            "BBQ area"
+        ]
+    },
+    {
+        "id": 7,
+        "estate_title": "Charming Country Cottage",
+        "segment_name": "Vacation Rental",
+        "image": "https://i.ibb.co/PgQD2FL/7.jpg",
+        "description": "Experience the countryside in this cozy cottage retreat surrounded by nature trails and scenic views. This charming cottage offers a peaceful escape from the hustle and bustle of city life. Explore nearby nature trails, relax by the fireplace, and enjoy outdoor seating with picturesque views. Ideal for a romantic getaway or a quiet retreat with family.",
+        "price": "$150/night",
+        "status": "Sale",
+        "area": "1,000 sq ft",
+        "location": "Rural Countryside, USA",
+        "facilities": [
+            "Nature trails",
+            "Fireplace",
+            "Outdoor seating"
+        ]
+    },
+    {
+        "id": 8,
+        "estate_title": "Lakefront Cabin",
+        "segment_name": "Vacation Rental",
+        "image": "https://i.ibb.co/QjFYyCk/8.jpg",
+        "description": "Unwind by the lake at this rustic cabin retreat offering peace and serenity, ideal for a relaxing getaway. This lakefront cabin provides a tranquil setting for relaxation and outdoor activities. Enjoy direct lake access, relax on the deck overlooking the water, and consider renting a boat for a day of exploring. Escape the everyday and embrace the beauty of nature.",
+        "price": "$200/night",
+        "status": "Rent",
+        "area": "1,200 sq ft",
+        "location": "Lakefront, Wilderness",
+        "facilities": [
+            "Lake access",
+            "Deck",
+            "Boat Rental"
+        ]
+    }
+]
