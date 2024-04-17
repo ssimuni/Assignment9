@@ -7,6 +7,7 @@ import Root from "../layouts/Root";
 import Error from "../components/Error";
 import Estates from "../components/Estates";
 import PrivateRoute from "./PrivateRoute";
+import Profile from "../components/Profile";
 
 const router = createBrowserRouter([
   {
@@ -31,6 +32,10 @@ const router = createBrowserRouter([
       {
         path: '/register',
         element: <Register></Register>
+      },
+      {
+        path: '/profile',
+        element: <PrivateRoute><Profile></Profile></PrivateRoute>
       }
     ]
   },

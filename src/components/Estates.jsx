@@ -18,13 +18,13 @@ const Estates = () => {
     const estate = estates.find(estate => estate.id === idInt);
     return (
         <div>
-            <Card className="w-[1000px] h-[700px] shadow-lg mb-5 flex mx-auto place-content-center mt-5 border">
+            <Card className="lg:w-[1000px] lg:h-[700px] shadow-lg mb-5 flex mx-auto place-content-center mt-5 border">
 
-                <div className='flex mx-auto'> <div>  <CardHeader floated={false} color="blue-gray" className='w-[500px] h-[500px]'>
-                    <span className="absolute right-0 top-0 z-10 mr-3 mt-3 inline-flex select-none rounded-lg bg-blue-500 px-3 py-2 text-sm font-bold text-white "> hello </span>
+                <div className='lg:flex mx-auto'> <div>  <CardHeader floated={false} color="blue-gray" className='lg:w-[500px] lg:h-[500px]'>
+                    <span className="absolute right-0 top-0 z-10 mr-3 mt-3 inline-flex select-none rounded-lg bg-blue-500 px-3 py-2 text-sm font-bold text-white "> {estate.status} </span>
                     <img
                         src={estate.image}
-                        className='w-[500px] h-[500px]'
+                        className='lg:w-[500px] lg:h-[500px]'
                         alt="ui/ux review check"
                     />
                     <div className="to-bg-black-10 absolute inset-0 h-full w-full bg-gradient-to-tr from-transparent via-transparent to-black/60 " />

@@ -65,12 +65,6 @@ const Register = () => {
                 })
     }
 
-
-    const handlePhotoChange = (e) => {
-        const file = e.target.files[0];
-        setPhoto(file);
-    }
-
     return (
         <section className="h-screen flex flex-col md:flex-row justify-center space-y-10 md:space-y-0 md:space-x-16 items-center my-2 mx-5 md:mx-0 md:my-0">
             <div className="md:w-1/3 max-w-sm">
@@ -92,10 +86,8 @@ const Register = () => {
                 />
                 <input
                     className="text-sm w-full px-4 py-2 border border-solid border-gray-300 rounded mt-4"
-                    type="file"
+                    type="text"
                     name='photo'
-                    accept="image/*"
-                    onChange={handlePhotoChange}
                     required
                     placeholder="Select Profile Picture"
                 />

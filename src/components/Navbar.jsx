@@ -17,13 +17,14 @@ const Navbar = () => {
             <div className="flex items-center space-x-4">
                 <div className="relative">
                     <div className="group cursor-pointer">
-                        <div className="w-10 h-10 rounded-full overflow-hidden bg-gray-300">
+                        <Link className="w-10 h-10 rounded-full overflow-hidden bg-gray-300" to="/profile">
                             <img
                                 src={user.photoURL || 'https://via.placeholder.com/150'}
                                 alt="User Avatar"
-                                className="w-full h-full object-cover"
+                                className="w-10 h-10 rounded-full object-cover"
+
                             />
-                        </div>
+                        </Link>
                         <span className="absolute -bottom-20 right-0 bg-white border-2 shadow-lg rounded-lg text-black px-1 py-0.5 opacity-0 group-hover:opacity-100 transition-opacity">
                             {user.displayName}
                         </span>

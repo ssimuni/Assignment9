@@ -34,7 +34,7 @@ const Login = () => {
         });
         setEmail('');
         setPassword('');
-        navigate('/');
+        navigate(location?.state ? location.state : '/');
       })
       .catch(error => {
         console.error(error);
@@ -76,7 +76,7 @@ const Login = () => {
       });
       setEmail('');
       setPassword('');
-      navigate('/');
+      navigate(location?.state ? location.state : '/');
     } catch (error) {
       console.error(error);
       Swal.fire({
