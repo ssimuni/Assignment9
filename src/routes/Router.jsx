@@ -9,6 +9,7 @@ import Estates from "../components/Estates";
 import PrivateRoute from "./PrivateRoute";
 import Profile from "../components/Profile";
 import FeedbackForm from "../components/FeedbackForm";
+import UpdateProfile from "../components/UpdateProfile";
 
 const router = createBrowserRouter([
   {
@@ -41,6 +42,10 @@ const router = createBrowserRouter([
       {
         path: '/feedbackform',
         element: <PrivateRoute><FeedbackForm></FeedbackForm></PrivateRoute>
+      },
+      {
+        path: '/updateProfile',
+        element: <PrivateRoute><UpdateProfile></UpdateProfile></PrivateRoute>
       }
     ]
   },
