@@ -7,10 +7,11 @@ import Swal from 'sweetalert2';
 import { AuthContext } from "../providers/AuthProvider";
 import 'animate.css';
 import { useNavigate } from 'react-router-dom';
-
+import useDynamicTitle from "./useDynamicTitle";
 
 
 const Register = () => {
+    useDynamicTitle('Register Page');
     const { createUser, logOut } = useContext(AuthContext);
     const navigate = useNavigate();
     const [registerError, setRegisterError] = useState('');

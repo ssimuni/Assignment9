@@ -1,11 +1,12 @@
 import React, { useContext, useState, useEffect } from 'react';
 import { AuthContext } from '../providers/AuthProvider';
+import useDynamicTitle from './useDynamicTitle';
 import Swal from 'sweetalert2';
 const Profile = () => {
     const { user, updateUserInfo } = useContext(AuthContext);
     const [name, setName] = useState('');
     const [photoURL, setPhotoURL] = useState('');
-
+    useDynamicTitle('Profile Page');
     useEffect(() => {
         if (user) {
             setName(user.displayName || '');

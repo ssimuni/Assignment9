@@ -1,5 +1,6 @@
 import React from 'react'
 import { useLoaderData, useParams } from 'react-router-dom'
+import useDynamicTitle from './useDynamicTitle';
 import {
     Card,
     CardHeader,
@@ -13,6 +14,7 @@ import {
 import { Link } from 'react-router-dom';
 const Estates = () => {
     const estates = useLoaderData();
+    useDynamicTitle('HomePage');
     const { id } = useParams();
     const idInt = parseInt(id);
     const estate = estates.find(estate => estate.id === idInt);

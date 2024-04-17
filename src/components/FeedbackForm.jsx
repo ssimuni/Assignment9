@@ -1,8 +1,10 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
+import useDynamicTitle from './useDynamicTitle';
 import Swal from 'sweetalert2';
 const FeedbackForm = () => {
+    useDynamicTitle('FeedBack Page');
     const { register, handleSubmit, formState: { errors } } = useForm();
     const navigate = useNavigate();
 
@@ -17,8 +19,8 @@ const FeedbackForm = () => {
     };
 
     return (
-        <div className="container mx-auto mt-10">
-            <h1 className="text-2xl font-bold mb-4">Feedback Form</h1>
+        <div className="container mx-auto mt-10 border border-blue-gray-700 rounded-lg shadow-lg w-[600px]">
+            <h1 className="text-3xl font-bold mb-4 text-center text-black pt-5">Feedback Form</h1>
             <form onSubmit={handleSubmit(onSubmit)} className="max-w-lg mx-auto">
                 <div className="mb-4">
                     <label htmlFor="name" className="block text-sm font-medium text-gray-700">Name</label>
@@ -61,7 +63,7 @@ const FeedbackForm = () => {
                 </div>
                 <button
                     type="submit"
-                    className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded"
+                    className="bg-black mx-auto flex text-white px-4 py-2 rounded mb-5"
                 >
                     Submit Feedback
                 </button>

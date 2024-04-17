@@ -1,7 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import useDynamicTitle from './useDynamicTitle';
 
 const Error = () => {
+    useDynamicTitle('Error Page');
     return (
         <div className="flex flex-col items-center justify-center h-screen">
             <h2 className="text-6xl font-bold mb-4">Oooppsss!!!</h2>
