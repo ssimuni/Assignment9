@@ -27,6 +27,17 @@ const AuthProvider = ({ children }) => {
         }
     };
 
+    const updateUserInfo = async (name, photoURL) => {
+        try {
+            await updateProfile(auth.currentUser, { displayName: name, photoURL });
+            setUser({ ...user, displayName: name, photoURL });
+        } catch (error) {
+            console.error('Error updating user info:', error.message);
+            throw error;
+        }
+    };
+
+
     const signIn = (email, password) => {
         setLoading(true);
         return signInWithEmailAndPassword(auth, email, password);
@@ -73,7 +84,7 @@ const AuthProvider = ({ children }) => {
     }, [])
     const authInfo = {
         user, loading, createUser, signIn, logOut, signInWithGoogle,
-        signInWithGithub
+        signInWithGithub, updateUserInfo
     }
 
     return (

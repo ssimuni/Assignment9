@@ -1,16 +1,26 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import { AuthContext } from '../providers/AuthProvider'
 
 const Navbar = () => {
 
     const { user, logOut } = useContext(AuthContext);
+    const [loadingUser, setLoadingUser] = useState(true);
 
+    useEffect(() => {
+        setLoadingUser(true);
+        const timeout = setTimeout(() => {
+            setLoadingUser(false);
+        }, 2000);
+
+        return () => clearTimeout(timeout);
+    }, []);
     const handleLogOut = () => {
         logOut()
             .then()
             .catch()
     }
+
 
     const renderLoggedInNavbar = () => {
         return (
@@ -18,19 +28,24 @@ const Navbar = () => {
                 <div className="relative">
                     <div className="group cursor-pointer">
                         <Link className="w-10 h-10 rounded-full overflow-hidden bg-gray-300" to="/profile">
-                            <img
-                                src={user.photoURL || 'https://via.placeholder.com/150'}
-                                alt="User Avatar"
-                                className="w-10 h-10 rounded-full object-cover"
-
-                            />
+                            {loadingUser ? (
+                                <div><span className="loading loading-spinner text-info"></span></div>
+                            ) : (
+                                <img
+                                    src={user.photoURL || 'https://via.placeholder.com/150'}
+                                    alt="User Avatar"
+                                    className="w-10 h-10 rounded-full object-cover"
+                                />
+                            )}
                         </Link>
                         <span className="absolute -bottom-20 right-0 bg-white border-2 shadow-lg rounded-lg text-black px-1 py-0.5 opacity-0 group-hover:opacity-100 transition-opacity">
-                            {user.displayName}
+                            {loadingUser ? 'Loading...' : user.displayName}
                         </span>
                     </div>
                 </div>
-                <button className="btn" onClick={handleLogOut}>Log Out</button>
+                <button className="btn" onClick={handleLogOut}>
+                    Log Out
+                </button>
             </div>
         );
     };
