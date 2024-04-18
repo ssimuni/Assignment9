@@ -67,7 +67,7 @@ const UpdateProfile = () => {
                     {errors.name && <p className="text-red-500 mt-1">{errors.name.message}</p>}
                 </div>
                 <div className="mb-4">
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-700">Email</label>
+                    <label htmlFor="email" className="block text-sm font-medium text-gray-700">Photo URL</label>
                     <div className="">
                         <input
                             type="text"
