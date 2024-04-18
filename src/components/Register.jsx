@@ -68,17 +68,17 @@ const Register = () => {
 
     return (
         <div className="bg-white place-content-center justify-center flex mb-10">
-            <section className="w-[800px] h-[500px] flex flex-col md:flex-row justify-center space-y-10 md:space-y-0 md:space-x-16 items-center my-2 md:mx-0 md:my-0 bg-white border-black border rounded-lg shadow-lg">
+            <section className="lg:w-[800px] lg:h-[500px] flex flex-col md:flex-row justify-center space-y-10 md:space-y-0 md:space-x-16 items-center my-2 md:mx-0 md:my-0 bg-white border-black border rounded-lg shadow-lg">
                 <div className="md:w-1/3 max-w-sm">
                     <img
-                    className="rounded-lg"
+                    className="rounded-lg hidden sm:block"
                         src="lr.jpg"
                         alt="Sample image"
                     />
                 </div>
                 <form className="md:w-1/3 max-w-sm" onSubmit={handleRegister}>
                     <div className="text-center md:text-left">
-                        <h1 className="text-black font-bold text-center text-4xl mb-5 animate__animated animate__repeat-2 animate__heartBeat">Register Here!</h1>
+                        <h1 className="text-black font-bold text-center text-4xl mb-5 animate__animated animate__repeat-2 animate__heartBeat mt-5">Register Here!</h1>
                     </div>
                     <input
                         className="text-sm w-full px-4 py-2 border border-solid border-gray-300 rounded"
@@ -125,7 +125,7 @@ const Register = () => {
                             Register
                         </button>
                     </div>
-                    <div className="mt-4 font-semibold text-sm text-slate-500 text-center md:text-left">
+                    <div className="mt-4 font-semibold text-sm text-slate-500 text-center md:text-left mb-5">
                         Already have an account?{" "}
                         <a
                             className="text-black hover:underline hover:underline-offset-4"

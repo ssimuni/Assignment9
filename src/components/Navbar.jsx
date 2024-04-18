@@ -74,7 +74,7 @@ const Navbar = () => {
                         {navlinks}
                     </ul>
                 </div>
-                <a className="btn btn-ghost text-xl">NestSeekersPlace</a>
+                <img className="btn btn-ghost w-28 h-20" src="/nest.png" alt="" />
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">

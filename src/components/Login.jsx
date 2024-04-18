@@ -91,17 +91,17 @@ const Login = () => {
 
   return (
     <div className="bg-white place-content-center justify-center flex mb-10">
-      <section className="w-[800px] h-[500px] flex flex-col md:flex-row justify-center space-y-10 md:space-y-0 md:space-x-16 items-center my-2 md:mx-0 md:my-0 bg-white border-black border rounded-lg shadow-lg">
+      <section className="lg:w-[800px] lg:h-[500px] flex flex-col md:flex-row justify-center space-y-10 md:space-y-0 md:space-x-16 items-center my-2 md:mx-0 md:my-0 bg-white border-black border rounded-lg shadow-lg">
         <div className="md:w-1/3 max-w-sm">
           <img
-           className="rounded-lg"
+            className="rounded-lg hidden sm:block"
             src="lr.jpg"
             alt="Sample image"
           />
         </div>
         <form className="md:w-1/3 max-w-sm" onSubmit={handleLogin}>
           <div className="text-center md:text-left">
-            <h1 className="text-black font-bold text-center text-4xl mb-5 animate__animated animate__heartBeat animate__repeat-2 ">Login Here!</h1>
+            <h1 className="text-black font-bold text-center text-4xl mb-5 animate__animated animate__heartBeat animate__repeat-2 mt-5">Login Here!</h1>
             <label className="mr-1">Sign in with</label>
             <button
               type="button"
@@ -156,7 +156,7 @@ const Login = () => {
               Login
             </button>
           </div>
-          <div className="mt-4 font-semibold text-sm text-slate-500 text-center md:text-left">
+          <div className="mt-4 font-semibold text-sm text-slate-500 text-center md:text-left mb-5">
             Don&apos;t have an account?{" "}
             <a
               className="text-black hover:underline hover:underline-offset-4"
