@@ -14,9 +14,9 @@ Visit the live site: [NestSeekersPlace](https://nestseekersplace.web.app/)
 
 ## Dependencies
 
-- [animation.css](https://animate.style/): Used for adding animations to UI elements.
-- [swiper](https://swiperjs.com/react): Implemented for building interactive sliders and carousels.
-- [react-hook-form](https://react-hook-form.com/): Leveraged for efficient form handling and validation.
+- [animation.css](https://animate.style/): Used for adding animations to heading in login register page.
+- [swiper](https://swiperjs.com/react): Implemented for building interactive sliders and carousels in homepage.
+- [react-hook-form](https://react-hook-form.com/): Leveraged for efficient form handling and validation in feedback form.
 
 ## Getting Started
 
